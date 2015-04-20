@@ -8,8 +8,9 @@
 
 (defvar packages
   '(haskell-mode
-    smex
-    magit)
+;    smex
+;    magit
+    )
   "Packages whose location follows the
   packages/package-name/package-name.el format.")
 
@@ -21,8 +22,8 @@
   package-name/module-name.el format.")
 
 (defvar configs
-  '("global"
-    "haskell")
+  '( "global"
+     "haskell")
   "Configuration files that follow the config/foo.el file path
   format.")
 
@@ -61,6 +62,6 @@
 
 ;; Mode initializations
 
-(smex-initialize)
+; (smex-initialize)
 (turn-on-haskell-simple-indent)
 (load "haskell-mode-autoloads.el")

@@ -48,9 +48,11 @@
 (global-set-key (kbd "M-w") 'clipboard-kill-ring-save)
 (global-set-key (kbd "C-y") 'clipboard-yank)
 
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c M-x") 'execute-extended-command)
+;; RRN: I haven't adapted my habits to this yet:
+;; (global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; RRN: what's this?
+; (global-set-key (kbd "C-c M-x") 'execute-extended-command)
 
 
 ;; Disable default settings
@@ -70,7 +72,7 @@
 
 
 ;; Enable cool modes
-(ido-mode 1)
+; (ido-mode 1) ;; RRN: Don't like it.
 (global-font-lock-mode 1)
 
 (require 'dired-x)
