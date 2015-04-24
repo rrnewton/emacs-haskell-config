@@ -37,7 +37,7 @@
 
 (global-set-key (kbd "M-;") 'comment-dwim-line)
 (global-set-key (kbd "M-g") 'goto-line)
-(global-set-key (kbd "C-z") 'ido-switch-buffer)
+; (global-set-key (kbd "C-z") 'ido-switch-buffer)
 
 (global-set-key (kbd "M-<left>") 'windmove-left)
 (global-set-key (kbd "M-<right>") 'windmove-right)
@@ -57,9 +57,9 @@
 
 ;; Disable default settings
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+; (scroll-bar-mode -1)
+; (tool-bar-mode -1)
+; (menu-bar-mode -1)
 
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
