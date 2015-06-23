@@ -198,6 +198,17 @@ the cursor position happened."
 (define-key haskell-interactive-mode-map (kbd "C-<right>") 'haskell-interactive-mode-error-forward)
 (define-key haskell-interactive-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
+(defun rrn-clear-and-switch ()
+    "Combined actions: clear process log, evaluate, bring up REPL."
+  (interactive)
+  (progn (haskell-interactive-mode-clear)
+         (haskell-process-load-or-reload)
+         (haskell-interactive-switch)
+         (end-of-buffer)))
+
+(define-key interactive-haskell-mode-map (kbd "C-c e") 'rrn-clear-and-switch)
+; (define-key haskell-interactive-mode-map (kbd "C-c e") 'rrn-clear-and-switch)
+
 (define-key shm-map (kbd "C-c C-p") 'shm/expand-pattern)
 (define-key shm-map (kbd "C-c C-s") 'shm/case-split)
 (define-key shm-map (kbd "SPC") 'shm-contextual-space)
@@ -208,3 +219,5 @@ the cursor position happened."
 (custom-set-faces
  '(shm-quarantine-face ((t (:inherit font-lock-error))))
  '(shm-current-face ((t (:background "#efefef")))))
+
+; (custom-set-variables '(haskell-tags-on-save t))
