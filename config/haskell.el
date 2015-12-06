@@ -198,11 +198,20 @@ the cursor position happened."
 (define-key haskell-interactive-mode-map (kbd "C-<right>") 'haskell-interactive-mode-error-forward)
 (define-key haskell-interactive-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
+(defun knock-down-other-win2 () (interactive)
+  ; (enlarge-window (floor (* 0.75 (window-height))))
+  (enlarge-window (- (frame-height) (window-height)
+		     ; (floor (* 0.25 (frame-height)))
+		     (floor (* 0.33 (frame-height)))
+		     ; (floor (* 0.18 (frame-height)))
+		     )))
+
 (defun rrn-clear-and-switch ()
     "Combined actions: clear process log, evaluate, bring up REPL."
   (interactive)
   (progn (haskell-interactive-mode-clear)
          (haskell-process-load-or-reload)
+         (knock-down-other-win2)
          (haskell-interactive-switch)
          (end-of-buffer)))
 
