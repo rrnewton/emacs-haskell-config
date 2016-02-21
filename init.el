@@ -1,9 +1,9 @@
-
+
 ;; Standard libraries needed
 
 (require 'cl-lib)
 
-
+
 ;; Packages and configs to load
 
 (defvar packages
@@ -27,7 +27,7 @@
   "Configuration files that follow the config/foo.el file path
   format.")
 
-
+
 ;; Load packages
 
 (cl-loop for location in custom-load-paths
@@ -46,12 +46,20 @@
                                           (symbol-name name)))
                      (require name))))
 
-(require 'shm)
-(require 'hindent)
-(require 'shm-case-split)
-(require 'shm-reformat)
 
-
+(require 'hindent)
+
+;; [2016.02.21] Disabling until I can fix problems on my little macbook:
+;; e.g.:
+;    Configuring descriptive-0.9.4...
+;;      setup-Simple-Cabal-1.18.1.5-ghc-7.8.4: /usr/bin/ar: permission denied
+(defun load-structured-haskell-mode ()
+  "Load required files to enable SHM"
+  (interactive)
+  (require 'shm)
+  (require 'shm-case-split)
+  (require 'shm-reformat))
+
 ;; Emacs configurations
 
 (cl-loop for name in configs
@@ -59,7 +67,7 @@
                           "config/"
                           name ".el")))
 
-
+
 ;; Mode initializations
 
 ; (smex-initialize)
