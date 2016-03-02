@@ -219,11 +219,16 @@ the cursor position happened."
 ; (define-key haskell-interactive-mode-map (kbd "C-c e") 'rrn-clear-and-switch)
 
 (define-key shm-map (kbd "C-c C-p") 'shm/expand-pattern)
-(define-key shm-map (kbd "C-c C-s") 'shm/case-split)
 (define-key shm-map (kbd "SPC") 'shm-contextual-space)
 (define-key shm-map (kbd "C-\\") 'shm/goto-last-point)
 (define-key shm-map (kbd "C-c C-f") 'shm-fold-toggle-decl)
 (define-key shm-map (kbd "C-c i") 'shm-reformat-decl)
+
+; (define-key shm-map (kbd "C-c C-s") 'shm/case-split)
+
+;; Note, currently my SHM case-splitting is broken [2015.04.20].
+;; Making ghc-mod case-splitting primary...
+(define-key shm-map (kbd "C-c C-s") 'ghc-case-split)
 
 (custom-set-faces
  '(shm-quarantine-face ((t (:inherit font-lock-error))))
