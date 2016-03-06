@@ -118,7 +118,7 @@
 ;; Hooks
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 
 ;; Auto-loads
