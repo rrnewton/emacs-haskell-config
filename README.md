@@ -443,3 +443,23 @@ should be a successful compile.
 There is very new, experimental flycheck support here:
 https://github.com/chrisdone/haskell-flycheck When I've finished pilot
 testing it, I'll document it better.
+
+
+## RRN Notes:
+
+I'm trying the newer flycheck-stack suppport.  It semes to work BUT
+I'm getting errors like this to *Messages*:
+
+    Suspicious state from syntax checker haskell-hlint: Checker haskell-hlint returned non-zero exit code 1, but no errors from output: hlint: Couldn't find file: HLint
+    Tried with:
+      HLint
+      HLint.hs
+      /Users/rrnewton/.cabal/share/x86_64-osx-ghc-7.10.2/hlint-1.9.25/HLint
+      /Users/rrnewton/.cabal/share/x86_64-osx-ghc-7.10.2/hlint-1.9.25/HLint.hs
+
+Ah, it seems this may actually be a ghc-mod problem?
+No, completely removing ghc-mod does not affect it.
+
+
+
+

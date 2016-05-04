@@ -25,3 +25,6 @@
 [submodule "packages/stack-ide"]
 	path = packages/stack-ide
 	url = git@github.com:commercialhaskell/stack-ide.git
+[submodule "packages/flycheck-stack"]
+	path = packages/flycheck-stack
+	url = git@github.com:chrisdone/flycheck-stack.git

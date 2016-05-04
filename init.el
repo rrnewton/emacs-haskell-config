@@ -81,6 +81,7 @@
   ; (add-hook 'haskell-interactive-mode-hook 'structured-haskell-repl-mode)
   )
 
+
 ;; Emacs configurations
 
 (cl-loop for name in configs

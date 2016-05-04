@@ -217,6 +217,13 @@ the cursor position happened."
 (define-key interactive-haskell-mode-map (kbd "C-c e") 'rrn-clear-and-switch)
 ; (define-key haskell-interactive-mode-map (kbd "C-c e") 'rrn-clear-and-switch)
 
-
-
 ; (custom-set-variables '(haskell-tags-on-save t))
+
+(add-to-list 'load-path
+             "~/.emacs.d/emacs-haskell-config/packages/flycheck-stack/")
+(require 'flycheck-stack)
+;; Annoyed by the constant checking? Customize the following variable
+;; (removing things you don't like):
+;; (setq flycheck-check-syntax-automatically '(save idle-change new-line mode-enabled))
+;; Prefer to trigger it manually?
+;; (define-key haskell-mode-map [f5] 'flycheck-buffer)
