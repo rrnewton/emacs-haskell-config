@@ -226,4 +226,4 @@ the cursor position happened."
 ;; (removing things you don't like):
 ;; (setq flycheck-check-syntax-automatically '(save idle-change new-line mode-enabled))
 ;; Prefer to trigger it manually?
-;; (define-key haskell-mode-map [f5] 'flycheck-buffer)
+(define-key haskell-mode-map [f5] 'flycheck-buffer)
