@@ -74,7 +74,9 @@
 
   (custom-set-faces
    '(shm-quarantine-face ((t (:inherit font-lock-error))))
-   '(shm-current-face ((t (:background "#efefef")))))
+   ;; '(shm-current-face ((t (:background "#efefef"))))
+    '(shm-current-face ((t (:background "#0b0ba0"))))
+   )
 
   ;; Hack: we could enable it for subsequent buffers once it is turned on:
   ; (add-hook 'haskell-mode-hook 'structured-haskell-mode)
