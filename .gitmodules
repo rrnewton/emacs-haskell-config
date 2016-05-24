@@ -23,7 +23,7 @@
 	path = packages/haskell-docs
 	url = git@github.com:chrisdone/haskell-docs.git
 [submodule "packages/stack-ide"]
-	path = packages/stack-ide
+	path = packages/deprecated/stack-ide
 	url = git@github.com:commercialhaskell/stack-ide.git
 [submodule "packages/flycheck-stack"]
 	path = packages/flycheck-stack
