@@ -86,6 +86,7 @@
 
 ;; Emacs configurations
 
+;; loads haskell.el and global.el:
 (cl-loop for name in configs
          do (load (concat (file-name-directory load-file-name)
                           "config/"
@@ -95,5 +96,5 @@
 ;; Mode initializations
 
 ; (smex-initialize)
-(turn-on-haskell-simple-indent)
+; (turn-on-haskell-simple-indent)
 (load "haskell-mode-autoloads.el")
