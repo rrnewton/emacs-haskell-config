@@ -66,6 +66,8 @@
   (define-key shm-map (kbd "C-c C-f") 'shm-fold-toggle-decl)
   (define-key shm-map (kbd "C-c i") 'shm-reformat-decl)
 
+  ;; [2016.09.25] Problem with this is that it requires you type the
+  ;; name of the type, and it still doesn't work very well after that.
   ; (define-key shm-map (kbd "C-c C-s") 'shm/case-split)
 
   ;; Note, currently my SHM case-splitting is broken [2015.04.20].
