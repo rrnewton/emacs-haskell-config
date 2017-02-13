@@ -5,6 +5,7 @@
 (require 'haskell-mode)
 (require 'hindent)
 (require 'haskell-process)
+
 ;; [2016.08.25] gone on my new ubuntu machine:
 ; (require 'haskell-simple-indent)
 (require 'haskell-interactive-mode)
